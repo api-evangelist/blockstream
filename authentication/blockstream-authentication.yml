@@ -1,0 +1,14 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/Blockstream/esplora/blob/master/API.md
+docs: https://github.com/Blockstream/esplora/blob/master/API.md
+summary:
+  types: []
+  authentication_required: false
+  note: >-
+    The Blockstream Esplora HTTP API is a public, read-mostly block explorer API
+    that requires no authentication, API key, or OAuth token. All endpoints are
+    open. The single write path (POST /tx broadcast) is also unauthenticated;
+    network consensus rules validate the submitted transaction. There are no
+    securitySchemes declared in the OpenAPI because none are used.
+schemes: []
