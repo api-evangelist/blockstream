@@ -1,0 +1,195 @@
+openapi: 3.1.0
+info:
+  title: Blockstream Esplora HTTP Addresses Transactions API
+  version: '1.0'
+  description: Esplora is Blockstream's open-source Bitcoin block explorer and its HTTP REST API. It provides read access to blocks, transactions, addresses, the mempool, fee estimates, and (on Liquid/Elements networks) issued assets. The API is public and requires no authentication. The same API backs blockstream.info and its testnet, signet, and Liquid networks. Amounts are in satoshis; hashes and txids are hex-encoded.
+  x-generated: '2026-07-18'
+  x-method: generated
+  x-source: https://github.com/Blockstream/esplora/blob/master/API.md
+  contact:
+    name: Blockstream Esplora
+    url: https://github.com/Blockstream/esplora
+  license:
+    name: MIT
+    url: https://github.com/Blockstream/esplora/blob/master/LICENSE
+servers:
+- url: https://blockstream.info/api
+  description: Bitcoin mainnet
+- url: https://blockstream.info/testnet/api
+  description: Bitcoin testnet
+- url: https://blockstream.info/signet/api
+  description: Bitcoin signet
+- url: https://blockstream.info/liquid/api
+  description: Liquid mainnet
+- url: https://blockstream.info/liquidtestnet/api
+  description: Liquid testnet
+tags:
+- name: Transactions
+paths:
+  /tx/{txid}:
+    get:
+      operationId: getTransaction
+      summary: Get transaction
+      description: Retrieve transaction information and details.
+      tags:
+      - Transactions
+      parameters:
+      - name: txid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Transaction object
+        '404':
+          description: Transaction not found
+  /tx/{txid}/status:
+    get:
+      operationId: getTransactionStatus
+      summary: Get transaction status
+      description: Check the confirmation status of a transaction.
+      tags:
+      - Transactions
+      parameters:
+      - name: txid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Transaction status object
+  /tx/{txid}/hex:
+    get:
+      operationId: getTransactionHex
+      summary: Get raw transaction (hex)
+      tags:
+      - Transactions
+      parameters:
+      - name: txid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Hex-encoded transaction
+  /tx/{txid}/raw:
+    get:
+      operationId: getTransactionRaw
+      summary: Get raw transaction (binary)
+      tags:
+      - Transactions
+      parameters:
+      - name: txid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Binary transaction data
+  /tx/{txid}/merkleblock-proof:
+    get:
+      operationId: getTransactionMerkleblockProof
+      summary: Get merkle inclusion proof (bitcoind format)
+      tags:
+      - Transactions
+      parameters:
+      - name: txid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Merkle block proof
+  /tx/{txid}/merkle-proof:
+    get:
+      operationId: getTransactionMerkleProof
+      summary: Get merkle inclusion proof (Electrum format)
+      tags:
+      - Transactions
+      parameters:
+      - name: txid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Merkle proof
+  /tx/{txid}/outspend/{vout}:
+    get:
+      operationId: getTransactionOutspend
+      summary: Get spending status of an output
+      tags:
+      - Transactions
+      parameters:
+      - name: txid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: vout
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Outspend object
+  /tx/{txid}/outspends:
+    get:
+      operationId: getTransactionOutspends
+      summary: Get spending status of all outputs
+      tags:
+      - Transactions
+      parameters:
+      - name: txid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Array of outspend objects
+  /tx:
+    post:
+      operationId: broadcastTransaction
+      summary: Broadcast raw transaction
+      description: Broadcast a hex-encoded raw transaction to the network.
+      tags:
+      - Transactions
+      requestBody:
+        required: true
+        content:
+          text/plain:
+            schema:
+              type: string
+              description: Hex-encoded raw transaction
+      responses:
+        '200':
+          description: Returns the txid of the broadcast transaction
+        '400':
+          description: Invalid or rejected transaction
+  /txs/package:
+    post:
+      operationId: broadcastTransactionPackage
+      summary: Broadcast a package of related transactions
+      tags:
+      - Transactions
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: string
+      responses:
+        '200':
+          description: Package broadcast result
+        '400':
+          description: Invalid or rejected package

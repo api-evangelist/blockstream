@@ -1,0 +1,133 @@
+openapi: 3.1.0
+info:
+  title: Blockstream Esplora HTTP Addresses Assets API
+  version: '1.0'
+  description: Esplora is Blockstream's open-source Bitcoin block explorer and its HTTP REST API. It provides read access to blocks, transactions, addresses, the mempool, fee estimates, and (on Liquid/Elements networks) issued assets. The API is public and requires no authentication. The same API backs blockstream.info and its testnet, signet, and Liquid networks. Amounts are in satoshis; hashes and txids are hex-encoded.
+  x-generated: '2026-07-18'
+  x-method: generated
+  x-source: https://github.com/Blockstream/esplora/blob/master/API.md
+  contact:
+    name: Blockstream Esplora
+    url: https://github.com/Blockstream/esplora
+  license:
+    name: MIT
+    url: https://github.com/Blockstream/esplora/blob/master/LICENSE
+servers:
+- url: https://blockstream.info/api
+  description: Bitcoin mainnet
+- url: https://blockstream.info/testnet/api
+  description: Bitcoin testnet
+- url: https://blockstream.info/signet/api
+  description: Bitcoin signet
+- url: https://blockstream.info/liquid/api
+  description: Liquid mainnet
+- url: https://blockstream.info/liquidtestnet/api
+  description: Liquid testnet
+tags:
+- name: Assets
+paths:
+  /asset/{asset_id}:
+    get:
+      operationId: getAsset
+      summary: Get asset information (Liquid/Elements only)
+      tags:
+      - Assets
+      parameters:
+      - name: asset_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Asset object
+  /asset/{asset_id}/txs:
+    get:
+      operationId: getAssetTransactions
+      summary: Get transactions for an asset (Liquid/Elements only)
+      tags:
+      - Assets
+      parameters:
+      - name: asset_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Array of transaction objects
+  /asset/{asset_id}/txs/mempool:
+    get:
+      operationId: getAssetMempoolTransactions
+      summary: Get mempool transactions for an asset (Liquid/Elements only)
+      tags:
+      - Assets
+      parameters:
+      - name: asset_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Array of unconfirmed transaction objects
+  /asset/{asset_id}/txs/chain/{last_seen}:
+    get:
+      operationId: getAssetTransactionsChain
+      summary: Paginate confirmed asset transactions (Liquid/Elements only)
+      tags:
+      - Assets
+      parameters:
+      - name: asset_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: last_seen
+        in: path
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Array of confirmed transaction objects
+  /asset/{asset_id}/supply:
+    get:
+      operationId: getAssetSupply
+      summary: Get current total asset supply (Liquid/Elements only)
+      tags:
+      - Assets
+      parameters:
+      - name: asset_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The current asset supply
+  /asset/{asset_id}/supply/decimal:
+    get:
+      operationId: getAssetSupplyDecimal
+      summary: Get asset supply with decimal formatting (Liquid/Elements only)
+      tags:
+      - Assets
+      parameters:
+      - name: asset_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The current asset supply
+          decimal-formatted: null
+  /assets/registry:
+    get:
+      operationId: getAssetsRegistry
+      summary: Get the list of issued assets (Liquid/Elements only)
+      tags:
+      - Assets
+      responses:
+        '200':
+          description: Array of registered assets with filtering and sorting
