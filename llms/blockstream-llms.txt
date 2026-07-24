@@ -1,0 +1,28 @@
+# Blockstream Esplora HTTP API
+
+> Blockstream's open-source Bitcoin block explorer (blockstream.info) and its public
+> HTTP REST API. Read blocks, transactions, addresses, the mempool, and fee
+> estimates across Bitcoin mainnet, testnet, and signet, plus Liquid/Elements
+> assets. No authentication required. Amounts are in satoshis; hashes are hex.
+
+## API
+- [Esplora HTTP API reference](https://github.com/Blockstream/esplora/blob/master/API.md): every REST endpoint, verbatim from the project.
+- Base URLs: https://blockstream.info/api (mainnet), /testnet/api, /signet/api, /liquid/api, /liquidtestnet/api
+
+## Specs
+- [OpenAPI](openapi/blockstream-esplora-openapi.yml): generated from the published API reference.
+- [Overlay](overlays/blockstream-esplora-overlay.yaml): API Evangelist enhancements.
+
+## Artifacts
+- [Authentication](authentication/blockstream-authentication.yml): none — public API.
+- [Conventions](conventions/blockstream-conventions.yml): pagination, error style, amounts, versioning.
+- [Errors](errors/blockstream-problem-types.yml): plain-text error catalog.
+- [Data model](data-model/blockstream-data-model.yml): block/tx/address/utxo/asset graph.
+- [Sandbox](sandbox/blockstream-sandbox.yml): testnet/signet base URLs.
+- [MCP tools (candidate)](mcp/blockstream-mcp.yml): agent tool set derived from the OpenAPI.
+- [Agent skill](skills/blockstream-check-address.md): check an address balance and history.
+- [Packages / SDKs](packages/blockstream-packages.yml): GDK and community clients.
+
+## Company
+- [Blockstream](https://blockstream.com): Bitcoin infrastructure — Liquid Network, Green wallet, Blockstream Satellite, mining.
+- [GitHub](https://github.com/Blockstream): open-source repositories including Esplora and GDK.

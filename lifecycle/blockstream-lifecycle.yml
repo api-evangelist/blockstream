@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/Blockstream/esplora
+versioning:
+  scheme: unversioned
+  current: null
+  detail: >-
+    The Esplora HTTP API carries no version prefix; network selection is by
+    base-URL path (/api, /testnet/api, /signet/api, /liquid/api,
+    /liquidtestnet/api). The API contract is stabilized in the open-source
+    Blockstream/esplora repository.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  detail: No formal deprecation policy or RFC 8594 Sunset/Deprecation header support is documented.
+sla:
+  url: null
+  uptime_target: null
+  detail: >-
+    No published SLA for the free public blockstream.info instance. Operators
+    needing guarantees self-host Esplora from the open-source project.
+status_page: null
+status_page_detail: No dedicated public status page found for the Esplora API.
+source_code: https://github.com/Blockstream/esplora
+deprecated_operations: []

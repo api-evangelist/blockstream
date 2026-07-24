@@ -1,0 +1,82 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/blockstream-esplora-openapi.yml
+note: >-
+  Entity graph derived from the Esplora API resource surface. Bitcoin's UTXO model:
+  blocks contain transactions; transactions have inputs (vin) that spend prior
+  outputs and outputs (vout) that create new ones; addresses/scripthashes index the
+  outputs that pay them. Assets exist only on Liquid/Elements networks.
+entities:
+  - name: Block
+    key: hash
+    also_addressable_by: [height]
+    fields: [id, height, version, timestamp, tx_count, size, weight, merkle_root, previousblockhash, nonce, bits]
+  - name: Transaction
+    key: txid
+    fields: [txid, version, locktime, size, weight, fee, vin, vout, status]
+  - name: TransactionInput
+    key: null
+    fields: [txid, vout, prevout, scriptsig, witness, sequence, is_coinbase]
+  - name: TransactionOutput
+    key: null
+    fields: [scriptpubkey, scriptpubkey_type, scriptpubkey_address, value, asset]
+  - name: Address
+    key: address
+    fields: [address, chain_stats, mempool_stats]
+  - name: Scripthash
+    key: hash
+    fields: [scripthash, chain_stats, mempool_stats]
+  - name: Utxo
+    key: null
+    fields: [txid, vout, value, status, asset]
+  - name: Asset
+    key: asset_id
+    network: liquid
+    fields: [asset_id, issuance_txin, issuance_prevout, contract, entity, name, ticker, precision, supply]
+  - name: MempoolStats
+    key: null
+    fields: [count, vsize, total_fee, fee_histogram]
+  - name: FeeEstimate
+    key: null
+    fields: [confirmation_target_blocks, sat_per_vb]
+relationships:
+  - from: Block
+    to: Transaction
+    kind: has_many
+    via: block hash (getBlockTransactions / getBlockTxids)
+  - from: Transaction
+    to: TransactionInput
+    kind: has_many
+    via: vin
+  - from: Transaction
+    to: TransactionOutput
+    kind: has_many
+    via: vout
+  - from: TransactionInput
+    to: TransactionOutput
+    kind: belongs_to
+    via: prevout (txid + vout it spends)
+  - from: Transaction
+    to: Block
+    kind: belongs_to
+    via: status.block_hash
+  - from: Address
+    to: Transaction
+    kind: has_many
+    via: getAddressTransactions
+  - from: Address
+    to: Utxo
+    kind: has_many
+    via: getAddressUtxo
+  - from: Scripthash
+    to: Transaction
+    kind: has_many
+    via: getScripthashTransactions
+  - from: Asset
+    to: Transaction
+    kind: has_many
+    via: getAssetTransactions
+  - from: TransactionOutput
+    to: Asset
+    kind: belongs_to
+    via: asset (liquid only)

@@ -1,22 +1,189 @@
 aid: blockstream
+accessModel:
+  pricing: unknown
+  onboarding: open
+  trial: false
+  try_now: false
+  public: true
+  label: Open access
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/blockstream.png
 name: Blockstream
-description: Blockstream is a company surfaced as a portfolio company of dcvc and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Blockstream is a Bitcoin infrastructure company whose products include the Liquid
+  Network sidechain, the Green self-custody wallet, Blockstream Satellite, and
+  Bitcoin mining and data services. For developers its flagship public API is
+  Esplora, the open-source Bitcoin block explorer behind blockstream.info: a
+  no-authentication HTTP REST API for reading blocks, transactions, addresses,
+  scripthashes, the mempool, and fee estimates across Bitcoin mainnet, testnet, and
+  signet, plus Liquid/Elements issued assets. Amounts are returned in satoshis and
+  hashes are hex-encoded, with cursor pagination over confirmed transaction history.
+  Blockstream also ships GDK, its open-source cross-platform wallet SDK.
 url: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - dcvc
-x-tier: stub
-x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- Bitcoin
+- Blockchain
+- Cryptocurrency
+- Block Explorer
+- Financial Services
+- Infrastructure
+apis:
+- aid: blockstream:blockstream-addresses-api
+  name: Blockstream Addresses API
+  description: The Addresses API from Blockstream — 11 operation(s) for addresses.
+  humanURL: https://github.com/Blockstream/esplora/blob/master/API.md
+  baseURL: https://blockstream.info/api
+  tags:
+  - Addresses
+  properties:
+  - type: OpenAPI
+    url: openapi/blockstream-addresses-api-openapi.yml
+  - type: APIReference
+    url: https://github.com/Blockstream/esplora/blob/master/API.md
+  - type: Sandbox
+    url: sandbox/blockstream-sandbox.yml
+- aid: blockstream:blockstream-assets-api
+  name: Blockstream Assets API
+  description: The Assets API from Blockstream — 7 operation(s) for assets.
+  humanURL: https://github.com/Blockstream/esplora/blob/master/API.md
+  baseURL: https://blockstream.info/api
+  tags:
+  - Assets
+  properties:
+  - type: OpenAPI
+    url: openapi/blockstream-assets-api-openapi.yml
+  - type: APIReference
+    url: https://github.com/Blockstream/esplora/blob/master/API.md
+  - type: Sandbox
+    url: sandbox/blockstream-sandbox.yml
+- aid: blockstream:blockstream-blocks-api
+  name: Blockstream Blocks API
+  description: The Blocks API from Blockstream — 11 operation(s) for blocks.
+  humanURL: https://github.com/Blockstream/esplora/blob/master/API.md
+  baseURL: https://blockstream.info/api
+  tags:
+  - Blocks
+  properties:
+  - type: OpenAPI
+    url: openapi/blockstream-blocks-api-openapi.yml
+  - type: APIReference
+    url: https://github.com/Blockstream/esplora/blob/master/API.md
+  - type: Sandbox
+    url: sandbox/blockstream-sandbox.yml
+- aid: blockstream:blockstream-fee-estimates-api
+  name: Blockstream Fee Estimates API
+  description: The Fee Estimates API from Blockstream — 1 operation(s) for fee estimates.
+  humanURL: https://github.com/Blockstream/esplora/blob/master/API.md
+  baseURL: https://blockstream.info/api
+  tags:
+  - Fee Estimates
+  properties:
+  - type: OpenAPI
+    url: openapi/blockstream-fee-estimates-api-openapi.yml
+  - type: APIReference
+    url: https://github.com/Blockstream/esplora/blob/master/API.md
+  - type: Sandbox
+    url: sandbox/blockstream-sandbox.yml
+- aid: blockstream:blockstream-mempool-api
+  name: Blockstream Mempool API
+  description: The Mempool API from Blockstream — 3 operation(s) for mempool.
+  humanURL: https://github.com/Blockstream/esplora/blob/master/API.md
+  baseURL: https://blockstream.info/api
+  tags:
+  - Mempool
+  properties:
+  - type: OpenAPI
+    url: openapi/blockstream-mempool-api-openapi.yml
+  - type: APIReference
+    url: https://github.com/Blockstream/esplora/blob/master/API.md
+  - type: Sandbox
+    url: sandbox/blockstream-sandbox.yml
+- aid: blockstream:blockstream-mining-api
+  name: Blockstream Mining API
+  description: The Mining API from Blockstream — 1 operation(s) for mining.
+  humanURL: https://github.com/Blockstream/esplora/blob/master/API.md
+  baseURL: https://blockstream.info/api
+  tags:
+  - Mining
+  properties:
+  - type: OpenAPI
+    url: openapi/blockstream-mining-api-openapi.yml
+  - type: APIReference
+    url: https://github.com/Blockstream/esplora/blob/master/API.md
+  - type: Sandbox
+    url: sandbox/blockstream-sandbox.yml
+- aid: blockstream:blockstream-transactions-api
+  name: Blockstream Transactions API
+  description: The Transactions API from Blockstream — 10 operation(s) for transactions.
+  humanURL: https://github.com/Blockstream/esplora/blob/master/API.md
+  baseURL: https://blockstream.info/api
+  tags:
+  - Transactions
+  properties:
+  - type: OpenAPI
+    url: openapi/blockstream-transactions-api-openapi.yml
+  - type: APIReference
+    url: https://github.com/Blockstream/esplora/blob/master/API.md
+  - type: Sandbox
+    url: sandbox/blockstream-sandbox.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: Documentation
+  url: https://github.com/Blockstream/esplora/blob/master/API.md
+- type: GitHubOrganization
+  url: https://github.com/Blockstream
+- type: Blog
+  url: https://blockstream.com/blog/
+- type: OpenAPI
+  url: openapi/blockstream-esplora-openapi.yml
+- type: Overlay
+  url: overlays/blockstream-esplora-overlay.yaml
+- type: Authentication
+  url: authentication/blockstream-authentication.yml
+- type: Conventions
+  url: conventions/blockstream-conventions.yml
+- type: ErrorCatalog
+  url: errors/blockstream-problem-types.yml
+- type: DataModel
+  url: data-model/blockstream-data-model.yml
+- type: Lifecycle
+  url: lifecycle/blockstream-lifecycle.yml
+- type: Conformance
+  url: conformance/blockstream-conformance.yml
+- type: Packages
+  url: packages/blockstream-packages.yml
+- type: SDKs
+  url: packages/blockstream-packages.yml
+- type: MCPServer
+  url: mcp/blockstream-mcp.yml
+- type: LLMsTxt
+  url: llms/blockstream-llms.txt
+- type: WellKnown
+  url: well-known/blockstream-well-known.yml
+- type: Sandbox
+  url: sandbox/blockstream-sandbox.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DomainSecurity
+  url: security/blockstream-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

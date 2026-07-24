@@ -1,0 +1,26 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/blockstream-esplora-openapi.yml
+standards:
+  - id: rest
+    conforms: true
+    evidence: Resource-oriented HTTP API with GET reads and POST for transaction broadcast.
+  - id: oauth2
+    conforms: false
+    evidence: No authentication; no oauth2 securitySchemes.
+  - id: openidconnect
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors returned as plain-text bodies, not application/problem+json.
+  - id: cursor-pagination
+    conforms: true
+    evidence: Confirmed transaction history paginates via last_seen_txid cursor, 25 per page.
+  - id: json
+    conforms: true
+    evidence: Primary representation is application/json.
+  - id: bip-standards
+    conforms: true
+    evidence: >-
+      Serves Bitcoin protocol data (addresses, scripts, witness, segwit weight)
+      consistent with Bitcoin BIPs; supports Liquid/Elements asset extensions.

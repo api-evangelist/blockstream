@@ -1,0 +1,52 @@
+generated: '2026-07-18'
+method: derived
+status: candidate
+source: openapi/blockstream-esplora-openapi.yml
+note: >-
+  No official Blockstream-hosted MCP server was found. This is a candidate tool set
+  derived from the Esplora OpenAPI operations, one tool per read/broadcast
+  operation, suitable for exposing the block explorer to agents.
+server:
+  name: blockstream-esplora
+  transport: http
+  url: null
+tools:
+  - name: get_transaction
+    description: Retrieve transaction information and details by txid.
+    source_operation: openapi/blockstream-esplora-openapi.yml#getTransaction
+  - name: get_transaction_status
+    description: Check the confirmation status of a transaction.
+    source_operation: openapi/blockstream-esplora-openapi.yml#getTransactionStatus
+  - name: get_transaction_outspends
+    description: Check the spending status of all outputs of a transaction.
+    source_operation: openapi/blockstream-esplora-openapi.yml#getTransactionOutspends
+  - name: broadcast_transaction
+    description: Broadcast a hex-encoded raw transaction to the network.
+    source_operation: openapi/blockstream-esplora-openapi.yml#broadcastTransaction
+  - name: get_address
+    description: Retrieve address information and chain/mempool statistics.
+    source_operation: openapi/blockstream-esplora-openapi.yml#getAddress
+  - name: get_address_transactions
+    description: Get the transaction history for an address.
+    source_operation: openapi/blockstream-esplora-openapi.yml#getAddressTransactions
+  - name: get_address_utxo
+    description: List unspent outputs for an address.
+    source_operation: openapi/blockstream-esplora-openapi.yml#getAddressUtxo
+  - name: get_block
+    description: Retrieve block information by hash.
+    source_operation: openapi/blockstream-esplora-openapi.yml#getBlock
+  - name: get_block_hash_at_height
+    description: Get the block hash at a given height.
+    source_operation: openapi/blockstream-esplora-openapi.yml#getBlockHashAtHeight
+  - name: get_blocks_tip_height
+    description: Get the current chain tip height.
+    source_operation: openapi/blockstream-esplora-openapi.yml#getBlocksTipHeight
+  - name: get_mempool
+    description: Get mempool statistics and the fee histogram.
+    source_operation: openapi/blockstream-esplora-openapi.yml#getMempool
+  - name: get_fee_estimates
+    description: Get estimated fees by confirmation target in sat/vB.
+    source_operation: openapi/blockstream-esplora-openapi.yml#getFeeEstimates
+  - name: get_asset
+    description: Get asset information (Liquid/Elements only).
+    source_operation: openapi/blockstream-esplora-openapi.yml#getAsset

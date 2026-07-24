@@ -1,0 +1,26 @@
+{
+  "provider": "blockstream",
+  "sources": [
+    "blockstream-addresses-api-openapi.yml",
+    "blockstream-assets-api-openapi.yml",
+    "blockstream-blocks-api-openapi.yml",
+    "blockstream-fee-estimates-api-openapi.yml",
+    "blockstream-mempool-api-openapi.yml",
+    "blockstream-mining-api-openapi.yml",
+    "blockstream-transactions-api-openapi.yml"
+  ],
+  "outputs": [
+    "blockstream-addresses-api-openapi.yml",
+    "blockstream-assets-api-openapi.yml",
+    "blockstream-blocks-api-openapi.yml",
+    "blockstream-fee-estimates-api-openapi.yml",
+    "blockstream-mempool-api-openapi.yml",
+    "blockstream-mining-api-openapi.yml",
+    "blockstream-transactions-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

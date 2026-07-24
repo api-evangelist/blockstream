@@ -1,0 +1,34 @@
+generated: '2026-07-18'
+method: derived
+source: >-
+  Blockstream GitHub organization (https://github.com/Blockstream) + the Esplora
+  project README.
+note: >-
+  Blockstream ships open-source developer libraries. GDK (Green Development Kit) is
+  Blockstream's first-party cross-platform wallet SDK with Python and Java/JNI
+  bindings. The Esplora HTTP API itself is a plain REST API consumed with any HTTP
+  client; the widely used esplora-client Rust crate is maintained by the Bitcoin
+  Dev Kit community (not Blockstream), so it is recorded here as community, not
+  official.
+packages:
+  - language: c
+    registry: github
+    name: gdk
+    url: https://github.com/Blockstream/gdk
+    install: See https://github.com/Blockstream/gdk build instructions
+    official: true
+    description: Blockstream Green Development Kit — cross-platform wallet SDK (Bitcoin + Liquid).
+  - language: python
+    registry: github
+    name: green_gdk
+    url: https://github.com/Blockstream/gdk
+    install: pip install green-gdk
+    official: true
+    description: Python bindings for GDK.
+  - language: rust
+    registry: crates.io
+    name: esplora-client
+    url: https://crates.io/crates/esplora-client
+    install: cargo add esplora-client
+    official: false
+    description: Community (Bitcoin Dev Kit) async/blocking client for the Esplora HTTP API.

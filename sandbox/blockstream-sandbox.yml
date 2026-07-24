@@ -1,0 +1,32 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/Blockstream/esplora/blob/master/API.md
+note: >-
+  Esplora exposes the standard Bitcoin/Liquid test networks through dedicated
+  base-URL prefixes on the same public instance. Developers test against testnet or
+  signet coins (no real value) before switching the base URL to mainnet. No API key
+  or account is required for any network.
+environments:
+  - name: mainnet
+    network: bitcoin
+    base_url: https://blockstream.info/api
+    live: true
+  - name: testnet
+    network: bitcoin-testnet
+    base_url: https://blockstream.info/testnet/api
+    live: false
+    faucet_note: Fund test addresses from a public Bitcoin testnet faucet.
+  - name: signet
+    network: bitcoin-signet
+    base_url: https://blockstream.info/signet/api
+    live: false
+  - name: liquid
+    network: liquid
+    base_url: https://blockstream.info/liquid/api
+    live: true
+  - name: liquidtestnet
+    network: liquid-testnet
+    base_url: https://blockstream.info/liquidtestnet/api
+    live: false
+switching:
+  detail: The only change required to move between environments is the base-URL prefix; request/response shapes are identical.

@@ -1,0 +1,52 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/Blockstream/esplora/blob/master/API.md
+authentication:
+  style: none
+  detail: Public API, no key or token required.
+pagination:
+  style: cursor
+  detail: >-
+    Confirmed transaction history is returned 25 items per page. To fetch the next
+    page, pass the txid of the last transaction from the previous page as the
+    last_seen_txid path segment (e.g. /address/:address/txs/chain/:last_seen_txid).
+    Block transactions paginate 25 at a time via a :start_index path segment.
+  params: [last_seen_txid, start_index]
+  page_size: 25
+idempotency:
+  supported: false
+  detail: >-
+    No idempotency-key mechanism. GET endpoints are naturally idempotent (safe
+    reads). Transaction broadcast (POST /tx) is idempotent at the network level:
+    re-broadcasting an already-known transaction returns the same txid.
+versioning:
+  scheme: none
+  detail: >-
+    The API is unversioned; there is no version prefix in the path. Network is
+    selected by the base-URL prefix (/api, /testnet/api, /signet/api,
+    /liquid/api, /liquidtestnet/api).
+content_types:
+  detail: >-
+    Most endpoints return application/json. Raw endpoints return text/plain hex
+    (/hex, /header) or application/octet-stream binary (/raw). Scalar endpoints
+    such as /blocks/tip/height and /fee-estimates values return plain text/JSON
+    scalars.
+amounts:
+  detail: All bitcoin amounts are expressed in satoshis (integer). Hashes and txids are hex-encoded.
+error_envelope:
+  style: plain-text
+  detail: >-
+    Errors are returned as an HTTP status code with a plain-text body describing
+    the problem (e.g. "Transaction not found", "sendrawtransaction RPC error").
+    Not RFC 9457 problem+json. See errors/blockstream-problem-types.yml.
+rate_limiting:
+  documented: false
+  detail: >-
+    The public blockstream.info instance applies operational rate limiting but does
+    not document a formal quota or expose standard rate-limit response headers.
+    Self-hosting Esplora removes limits.
+cross_reference:
+  errors: errors/blockstream-problem-types.yml
+  lifecycle: lifecycle/blockstream-lifecycle.yml
+  authentication: authentication/blockstream-authentication.yml
+  data_model: data-model/blockstream-data-model.yml

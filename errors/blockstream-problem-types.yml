@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/blockstream-esplora-openapi.yml
+format: plain-text
+note: >-
+  Esplora returns errors as an HTTP status code plus a short plain-text body (not
+  RFC 9457 problem+json). The catalog below is derived from the documented
+  endpoint behavior and observed responses.
+problems:
+  - status: 400
+    title: Bad request
+    detail: >-
+      Malformed input, invalid txid/address/hash format, or a rejected raw
+      transaction on POST /tx (body carries the underlying node RPC error such as
+      "sendrawtransaction RPC error: ...").
+    source_operation: openapi/blockstream-esplora-openapi.yml#broadcastTransaction
+  - status: 404
+    title: Not found
+    detail: The requested transaction, block, address, scripthash, or asset does not exist or is not indexed.
+    source_operation: openapi/blockstream-esplora-openapi.yml#getTransaction
+  - status: 429
+    title: Too many requests
+    detail: Operational rate limiting on the public blockstream.info instance. Not formally documented; retry with backoff or self-host Esplora.
+    source_operation: null
+  - status: 500
+    title: Internal server error
+    detail: Upstream node or indexer error.
+    source_operation: null

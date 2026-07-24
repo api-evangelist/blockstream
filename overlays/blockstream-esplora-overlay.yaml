@@ -1,0 +1,15 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Blockstream Esplora HTTP API
+  version: 1.0.0
+extends: openapi/blockstream-esplora-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-enriched: '2026-07-18'
+      x-api-network: Bitcoin / Liquid block explorer
+      x-authentication: none
+      x-pagination: cursor (last_seen_txid, 25 per page)
+  - target: $.info
+    update:
+      x-agentic-access: read-optimized public data API; single write path is transaction broadcast

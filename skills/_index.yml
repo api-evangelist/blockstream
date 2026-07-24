@@ -1,0 +1,7 @@
+generated: '2026-07-18'
+method: generated
+skills:
+  - file: blockstream-check-address.md
+    name: Check a Bitcoin address balance and history
+    api: openapi/blockstream-esplora-openapi.yml
+    operations: [getAddress, getAddressTransactions, getAddressTransactionsChain, getAddressUtxo]
