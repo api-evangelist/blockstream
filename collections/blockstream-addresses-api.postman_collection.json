@@ -1,0 +1,890 @@
+{
+  "item": [
+    {
+      "id": "9df53ed2-cf38-46db-84a6-4e79c2c7b251",
+      "name": "Addresses",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "096806c9-c2a0-4aed-a5fa-dc1d8dfbb03f",
+          "name": "Get address information",
+          "request": {
+            "name": "Get address information",
+            "description": {},
+            "url": {
+              "path": [
+                "address",
+                ":address"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "address",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "18f3af7d-d40f-4e6b-8e23-aab85ff06300",
+              "name": "Address object with chain and mempool stats",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "address",
+                    ":address"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "address",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f9e319f1-8eb1-4f03-a433-81a91da257e4",
+          "name": "Get scripthash information",
+          "request": {
+            "name": "Get scripthash information",
+            "description": {},
+            "url": {
+              "path": [
+                "scripthash",
+                ":hash"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "hash",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "07fcb1f3-a5ad-4bfb-bc74-6b28081c5d4f",
+              "name": "Scripthash object with chain and mempool stats",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "scripthash",
+                    ":hash"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "hash",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a8c569b4-f76a-45aa-8b8a-297647a8be19",
+          "name": "Get address transaction history",
+          "request": {
+            "name": "Get address transaction history",
+            "description": {},
+            "url": {
+              "path": [
+                "address",
+                ":address",
+                "txs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "address",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "067f9e29-a1e7-46f6-82a8-6761206c7d7b",
+              "name": "Array of transaction objects",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "address",
+                    ":address",
+                    "txs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "address",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "899f54ea-962b-4837-8902-6d8341dfcf15",
+          "name": "Get scripthash transaction history",
+          "request": {
+            "name": "Get scripthash transaction history",
+            "description": {},
+            "url": {
+              "path": [
+                "scripthash",
+                ":hash",
+                "txs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "hash",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "76f7c2f0-1a61-483a-91bb-4faa243a0014",
+              "name": "Array of transaction objects",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "scripthash",
+                    ":hash",
+                    "txs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "hash",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "97305bf6-8de8-4d3d-b509-40515a2ce9a4",
+          "name": "Paginate confirmed address transactions",
+          "request": {
+            "name": "Paginate confirmed address transactions",
+            "description": {
+              "content": "Returns confirmed transactions, 25 per page. Provide the last_seen_txid of the previous page to fetch the next page (cursor pagination).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "address",
+                ":address",
+                "txs",
+                "chain",
+                ":last_seen_txid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "address",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "last_seen_txid"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "37d4198a-b1a0-48af-9c77-48a33a70c879",
+              "name": "Array of up to 25 confirmed transaction objects",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "address",
+                    ":address",
+                    "txs",
+                    "chain",
+                    ":last_seen_txid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "address",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "last_seen_txid"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ee65c2b6-b42c-4aff-a646-6cef017011db",
+          "name": "Paginate confirmed scripthash transactions",
+          "request": {
+            "name": "Paginate confirmed scripthash transactions",
+            "description": {},
+            "url": {
+              "path": [
+                "scripthash",
+                ":hash",
+                "txs",
+                "chain",
+                ":last_seen_txid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "hash",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "last_seen_txid"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f8b14955-752b-4f76-b5af-0d6cd1c6b302",
+              "name": "Array of up to 25 confirmed transaction objects",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "scripthash",
+                    ":hash",
+                    "txs",
+                    "chain",
+                    ":last_seen_txid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "hash",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "last_seen_txid"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "31b75fd2-f202-4af6-b9d2-e4470ab4284e",
+          "name": "Get unconfirmed address transactions",
+          "request": {
+            "name": "Get unconfirmed address transactions",
+            "description": {},
+            "url": {
+              "path": [
+                "address",
+                ":address",
+                "txs",
+                "mempool"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "address",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1106317b-b5a5-4a15-add9-8d2adb8d5b57",
+              "name": "Array of unconfirmed transaction objects",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "address",
+                    ":address",
+                    "txs",
+                    "mempool"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "address",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a81fe598-c571-4d83-ac44-81c023677ff3",
+          "name": "Get unconfirmed scripthash transactions",
+          "request": {
+            "name": "Get unconfirmed scripthash transactions",
+            "description": {},
+            "url": {
+              "path": [
+                "scripthash",
+                ":hash",
+                "txs",
+                "mempool"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "hash",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4bbb5357-7bb5-489c-a9c1-e1bd7a000c79",
+              "name": "Array of unconfirmed transaction objects",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "scripthash",
+                    ":hash",
+                    "txs",
+                    "mempool"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "hash",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "59818fda-abbd-4160-840e-bab71796b488",
+          "name": "List unspent outputs for an address",
+          "request": {
+            "name": "List unspent outputs for an address",
+            "description": {},
+            "url": {
+              "path": [
+                "address",
+                ":address",
+                "utxo"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "address",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b55559c0-e84f-4eec-b7ff-d21cc98982b7",
+              "name": "Array of UTXO objects",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "address",
+                    ":address",
+                    "utxo"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "address",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "91e7349e-e1fb-4bba-9e53-5b52afb1445a",
+          "name": "List unspent outputs for a scripthash",
+          "request": {
+            "name": "List unspent outputs for a scripthash",
+            "description": {},
+            "url": {
+              "path": [
+                "scripthash",
+                ":hash",
+                "utxo"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "hash",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a3fd696e-00ac-4f48-b65b-d7d36323b3ac",
+              "name": "Array of UTXO objects",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "scripthash",
+                    ":hash",
+                    "utxo"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "hash",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cbe93e0e-ff9b-4a30-b5a6-583ef165cbd8",
+          "name": "Search addresses by prefix",
+          "request": {
+            "name": "Search addresses by prefix",
+            "description": {},
+            "url": {
+              "path": [
+                "address-prefix",
+                ":prefix"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "prefix",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0d888b66-0088-4292-ab34-a322740fb2c2",
+              "name": "Array of matching addresses",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "address-prefix",
+                    ":prefix"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "prefix",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://blockstream.info/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "6ed908dc-a2c0-4386-a2f4-dae0fed79878",
+    "name": "Blockstream Esplora HTTP Addresses API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Esplora is Blockstream's open-source Bitcoin block explorer and its HTTP REST API. It provides read access to blocks, transactions, addresses, the mempool, fee estimates, and (on Liquid/Elements networks) issued assets. The API is public and requires no authentication. The same API backs blockstream.info and its testnet, signet, and Liquid networks. Amounts are in satoshis; hashes and txids are hex-encoded.\n\nContact Support:\n Name: Blockstream Esplora",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "item": [
+    {
+      "id": "cc53a31a-2401-4d85-9c40-0e3734f3f035",
+      "name": "Mining",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b11e4965-7f2c-4e06-b3e5-5db56f9bde88",
+          "name": "Retrieve a block template for mining",
+          "request": {
+            "name": "Retrieve a block template for mining",
+            "description": {},
+            "url": {
+              "path": [
+                "block-template"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3a28f5f8-ee30-4f6f-9203-130291fd971c",
+              "name": "Block template object",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "block-template"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://blockstream.info/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "5aa3973a-fb6a-4fc0-bfbc-e5186beded2f",
+    "name": "Blockstream Esplora HTTP Addresses Mining API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Esplora is Blockstream's open-source Bitcoin block explorer and its HTTP REST API. It provides read access to blocks, transactions, addresses, the mempool, fee estimates, and (on Liquid/Elements networks) issued assets. The API is public and requires no authentication. The same API backs blockstream.info and its testnet, signet, and Liquid networks. Amounts are in satoshis; hashes and txids are hex-encoded.\n\nContact Support:\n Name: Blockstream Esplora",
+      "type": "text/plain"
+    }
+  }
+}

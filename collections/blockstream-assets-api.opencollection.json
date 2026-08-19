@@ -1,0 +1,142 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Blockstream Esplora HTTP Addresses Assets API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Assets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get asset information (Liquid/Elements only)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/asset/:asset_id",
+            "params": [
+              {
+                "name": "asset_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get asset information (Liquid/Elements only)"
+        },
+        {
+          "info": {
+            "name": "Get transactions for an asset (Liquid/Elements only)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/asset/:asset_id/txs",
+            "params": [
+              {
+                "name": "asset_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get transactions for an asset (Liquid/Elements only)"
+        },
+        {
+          "info": {
+            "name": "Get mempool transactions for an asset (Liquid/Elements only)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/asset/:asset_id/txs/mempool",
+            "params": [
+              {
+                "name": "asset_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get mempool transactions for an asset (Liquid/Elements only)"
+        },
+        {
+          "info": {
+            "name": "Paginate confirmed asset transactions (Liquid/Elements only)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/asset/:asset_id/txs/chain/:last_seen",
+            "params": [
+              {
+                "name": "asset_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "last_seen",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Paginate confirmed asset transactions (Liquid/Elements only)"
+        },
+        {
+          "info": {
+            "name": "Get current total asset supply (Liquid/Elements only)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/asset/:asset_id/supply",
+            "params": [
+              {
+                "name": "asset_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get current total asset supply (Liquid/Elements only)"
+        },
+        {
+          "info": {
+            "name": "Get asset supply with decimal formatting (Liquid/Elements only)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/asset/:asset_id/supply/decimal",
+            "params": [
+              {
+                "name": "asset_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get asset supply with decimal formatting (Liquid/Elements only)"
+        },
+        {
+          "info": {
+            "name": "Get the list of issued assets (Liquid/Elements only)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/assets/registry"
+          },
+          "docs": "Get the list of issued assets (Liquid/Elements only)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

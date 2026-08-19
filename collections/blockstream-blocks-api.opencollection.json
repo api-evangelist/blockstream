@@ -1,0 +1,212 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Blockstream Esplora HTTP Addresses Blocks API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Blocks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get block information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/block/:hash",
+            "params": [
+              {
+                "name": "hash",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get block information"
+        },
+        {
+          "info": {
+            "name": "Get hex-encoded block header",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/block/:hash/header",
+            "params": [
+              {
+                "name": "hash",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get hex-encoded block header"
+        },
+        {
+          "info": {
+            "name": "Get block confirmation status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/block/:hash/status",
+            "params": [
+              {
+                "name": "hash",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get block confirmation status"
+        },
+        {
+          "info": {
+            "name": "List transactions in a block",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/block/:hash/txs/:start_index",
+            "params": [
+              {
+                "name": "hash",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "start_index",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns up to 25 transactions starting at start_index."
+        },
+        {
+          "info": {
+            "name": "Get all transaction IDs in a block",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/block/:hash/txids",
+            "params": [
+              {
+                "name": "hash",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get all transaction IDs in a block"
+        },
+        {
+          "info": {
+            "name": "Get transaction ID at a specific index in a block",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/block/:hash/txid/:index",
+            "params": [
+              {
+                "name": "hash",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "index",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get transaction ID at a specific index in a block"
+        },
+        {
+          "info": {
+            "name": "Get block in raw binary format",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/block/:hash/raw",
+            "params": [
+              {
+                "name": "hash",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get block in raw binary format"
+        },
+        {
+          "info": {
+            "name": "Get block hash at a height",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/block-height/:height",
+            "params": [
+              {
+                "name": "height",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get block hash at a height"
+        },
+        {
+          "info": {
+            "name": "Get the 10 newest blocks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/blocks/:start_height",
+            "params": [
+              {
+                "name": "start_height",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns the 10 newest blocks, or the 10 blocks preceding start_height."
+        },
+        {
+          "info": {
+            "name": "Get current chain tip height",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/blocks/tip/height"
+          },
+          "docs": "Get current chain tip height"
+        },
+        {
+          "info": {
+            "name": "Get current chain tip hash",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/blocks/tip/hash"
+          },
+          "docs": "Get current chain tip hash"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

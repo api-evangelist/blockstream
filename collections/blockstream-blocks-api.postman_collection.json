@@ -1,0 +1,891 @@
+{
+  "item": [
+    {
+      "id": "6e264daa-98a5-4b7f-abbe-36cb467c8a03",
+      "name": "Blocks",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "03805a73-e74c-4958-948e-587120b395fe",
+          "name": "Get block information",
+          "request": {
+            "name": "Get block information",
+            "description": {},
+            "url": {
+              "path": [
+                "block",
+                ":hash"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "hash",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1d305803-b241-4f2e-9e49-62a42aee4c7c",
+              "name": "Block object",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "block",
+                    ":hash"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "hash",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2002d49a-cf9f-4aed-b764-e02782d55ca2",
+              "name": "Block not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "block",
+                    ":hash"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "hash",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b1ea5948-d25f-44bb-a283-79a8fbc9e347",
+          "name": "Get hex-encoded block header",
+          "request": {
+            "name": "Get hex-encoded block header",
+            "description": {},
+            "url": {
+              "path": [
+                "block",
+                ":hash",
+                "header"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "hash",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "82fa9030-6424-45dd-ac6e-4e2e0636b77c",
+              "name": "Hex-encoded block header",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "block",
+                    ":hash",
+                    "header"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "hash",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "122a72b2-6b16-4de5-ab4c-2f4d4a064b57",
+          "name": "Get block confirmation status",
+          "request": {
+            "name": "Get block confirmation status",
+            "description": {},
+            "url": {
+              "path": [
+                "block",
+                ":hash",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "hash",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2e68f08e-01d0-4ba7-b831-5253bfa780dc",
+              "name": "Block status object",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "block",
+                    ":hash",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "hash",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0be2e842-13c2-4b95-91c0-016733bb4967",
+          "name": "List transactions in a block",
+          "request": {
+            "name": "List transactions in a block",
+            "description": {
+              "content": "Returns up to 25 transactions starting at start_index.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "block",
+                ":hash",
+                "txs",
+                ":start_index"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "hash",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "start_index"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a591e481-169a-40fd-a17d-45e6a350e7f3",
+              "name": "Array of up to 25 transaction objects",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "block",
+                    ":hash",
+                    "txs",
+                    ":start_index"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "hash",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "start_index"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f382444d-3f7f-4bb1-a1c5-2a6ce49b3706",
+          "name": "Get all transaction IDs in a block",
+          "request": {
+            "name": "Get all transaction IDs in a block",
+            "description": {},
+            "url": {
+              "path": [
+                "block",
+                ":hash",
+                "txids"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "hash",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ff118da7-6825-4133-a400-f873f4381a97",
+              "name": "Array of txids",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "block",
+                    ":hash",
+                    "txids"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "hash",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "810be6e2-9594-49de-8515-4b6c08b5c2c7",
+          "name": "Get transaction ID at a specific index in a block",
+          "request": {
+            "name": "Get transaction ID at a specific index in a block",
+            "description": {},
+            "url": {
+              "path": [
+                "block",
+                ":hash",
+                "txid",
+                ":index"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "hash",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "index",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b719fd87-8bdb-45be-8911-708c6e44c084",
+              "name": "A single txid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "block",
+                    ":hash",
+                    "txid",
+                    ":index"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "hash",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "index",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1682f196-9c7c-4465-9fef-412d4d7e3df8",
+          "name": "Get block in raw binary format",
+          "request": {
+            "name": "Get block in raw binary format",
+            "description": {},
+            "url": {
+              "path": [
+                "block",
+                ":hash",
+                "raw"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "hash",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4413fdeb-34b8-4c80-a48e-a5fe16d74d2d",
+              "name": "Binary block data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "block",
+                    ":hash",
+                    "raw"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "hash",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "952ab4d0-c666-4022-9c2d-25f9de57ee7b",
+          "name": "Get block hash at a height",
+          "request": {
+            "name": "Get block hash at a height",
+            "description": {},
+            "url": {
+              "path": [
+                "block-height",
+                ":height"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "height",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a02ec22e-72eb-4d11-9649-85a30179e985",
+              "name": "Block hash",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "block-height",
+                    ":height"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "height",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9496e3c4-75b0-469b-8983-7f6e3a068cbf",
+          "name": "Get the 10 newest blocks",
+          "request": {
+            "name": "Get the 10 newest blocks",
+            "description": {
+              "content": "Returns the 10 newest blocks, or the 10 blocks preceding start_height.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "blocks",
+                ":start_height"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "start_height"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b8c00484-27c9-4662-81f1-296aae24c291",
+              "name": "Array of up to 10 block objects",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "blocks",
+                    ":start_height"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "start_height"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e75dcdde-c216-48fb-b737-c6e4825ce681",
+          "name": "Get current chain tip height",
+          "request": {
+            "name": "Get current chain tip height",
+            "description": {},
+            "url": {
+              "path": [
+                "blocks",
+                "tip",
+                "height"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "67650810-d3f3-4a83-a7cf-77b852c2ebc0",
+              "name": "The tip height as an integer",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "blocks",
+                    "tip",
+                    "height"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6fd56fcc-db4a-4433-98aa-f4c20333147a",
+          "name": "Get current chain tip hash",
+          "request": {
+            "name": "Get current chain tip hash",
+            "description": {},
+            "url": {
+              "path": [
+                "blocks",
+                "tip",
+                "hash"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2f7d8eec-b4f8-4bf8-a1c2-1a73414870ab",
+              "name": "The tip block hash",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "blocks",
+                    "tip",
+                    "hash"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://blockstream.info/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "70b9a8d5-a155-4e65-a1e5-b3903ea078ad",
+    "name": "Blockstream Esplora HTTP Addresses Blocks API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Esplora is Blockstream's open-source Bitcoin block explorer and its HTTP REST API. It provides read access to blocks, transactions, addresses, the mempool, fee estimates, and (on Liquid/Elements networks) issued assets. The API is public and requires no authentication. The same API backs blockstream.info and its testnet, signet, and Liquid networks. Amounts are in satoshis; hashes and txids are hex-encoded.\n\nContact Support:\n Name: Blockstream Esplora",
+      "type": "text/plain"
+    }
+  }
+}

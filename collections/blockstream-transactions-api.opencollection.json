@@ -1,0 +1,193 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Blockstream Esplora HTTP Addresses Transactions API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Transactions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get transaction",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/tx/:txid",
+            "params": [
+              {
+                "name": "txid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve transaction information and details."
+        },
+        {
+          "info": {
+            "name": "Get transaction status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/tx/:txid/status",
+            "params": [
+              {
+                "name": "txid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Check the confirmation status of a transaction."
+        },
+        {
+          "info": {
+            "name": "Get raw transaction (hex)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/tx/:txid/hex",
+            "params": [
+              {
+                "name": "txid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get raw transaction (hex)"
+        },
+        {
+          "info": {
+            "name": "Get raw transaction (binary)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/tx/:txid/raw",
+            "params": [
+              {
+                "name": "txid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get raw transaction (binary)"
+        },
+        {
+          "info": {
+            "name": "Get merkle inclusion proof (bitcoind format)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/tx/:txid/merkleblock-proof",
+            "params": [
+              {
+                "name": "txid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get merkle inclusion proof (bitcoind format)"
+        },
+        {
+          "info": {
+            "name": "Get merkle inclusion proof (Electrum format)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/tx/:txid/merkle-proof",
+            "params": [
+              {
+                "name": "txid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get merkle inclusion proof (Electrum format)"
+        },
+        {
+          "info": {
+            "name": "Get spending status of an output",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/tx/:txid/outspend/:vout",
+            "params": [
+              {
+                "name": "txid",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "vout",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get spending status of an output"
+        },
+        {
+          "info": {
+            "name": "Get spending status of all outputs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/tx/:txid/outspends",
+            "params": [
+              {
+                "name": "txid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get spending status of all outputs"
+        },
+        {
+          "info": {
+            "name": "Broadcast raw transaction",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://blockstream.info/api/tx"
+          },
+          "docs": "Broadcast a hex-encoded raw transaction to the network."
+        },
+        {
+          "info": {
+            "name": "Broadcast a package of related transactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://blockstream.info/api/txs/package",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Broadcast a package of related transactions"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

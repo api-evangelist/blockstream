@@ -1,0 +1,51 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Blockstream Esplora HTTP Addresses Mempool API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Mempool",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get mempool statistics and fee histogram",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/mempool"
+          },
+          "docs": "Get mempool statistics and fee histogram"
+        },
+        {
+          "info": {
+            "name": "Get all transaction IDs in the mempool",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/mempool/txids"
+          },
+          "docs": "Get all transaction IDs in the mempool"
+        },
+        {
+          "info": {
+            "name": "Get the 10 most recent mempool transactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/mempool/recent"
+          },
+          "docs": "Get the 10 most recent mempool transactions"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

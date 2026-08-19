@@ -1,0 +1,90 @@
+{
+  "item": [
+    {
+      "id": "a32c1093-8a51-48cf-a72f-c6c15caa9c8c",
+      "name": "Fee Estimates",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1936f089-da5a-438b-87a9-fc8666dada4b",
+          "name": "Get estimated fees by confirmation target",
+          "request": {
+            "name": "Get estimated fees by confirmation target",
+            "description": {
+              "content": "Returns a map of confirmation target (in blocks) to the estimated fee rate in sat/vB.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "fee-estimates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7a07559f-9f27-4e23-814e-93f69b8f1b3d",
+              "name": "Map of confirmation target to fee rate",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "fee-estimates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://blockstream.info/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "9f5ebceb-ec60-40d6-b575-6b1663e95244",
+    "name": "Blockstream Esplora HTTP Addresses Fee Estimates API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Esplora is Blockstream's open-source Bitcoin block explorer and its HTTP REST API. It provides read access to blocks, transactions, addresses, the mempool, fee estimates, and (on Liquid/Elements networks) issued assets. The API is public and requires no authentication. The same API backs blockstream.info and its testnet, signet, and Liquid networks. Amounts are in satoshis; hashes and txids are hex-encoded.\n\nContact Support:\n Name: Blockstream Esplora",
+      "type": "text/plain"
+    }
+  }
+}

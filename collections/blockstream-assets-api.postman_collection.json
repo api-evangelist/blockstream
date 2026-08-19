@@ -1,0 +1,557 @@
+{
+  "item": [
+    {
+      "id": "59bddabd-ed00-489a-8881-3b0ba65602d9",
+      "name": "Assets",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "babea824-a7d4-4706-9417-1db94cf8b5a9",
+          "name": "Get asset information (Liquid/Elements only)",
+          "request": {
+            "name": "Get asset information (Liquid/Elements only)",
+            "description": {},
+            "url": {
+              "path": [
+                "asset",
+                ":asset_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "asset_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fff6dec3-75be-4ec9-9647-8376ba74d41c",
+              "name": "Asset object",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "asset",
+                    ":asset_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "asset_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e595b52c-097c-471c-998f-b2c28db0ba74",
+          "name": "Get transactions for an asset (Liquid/Elements only)",
+          "request": {
+            "name": "Get transactions for an asset (Liquid/Elements only)",
+            "description": {},
+            "url": {
+              "path": [
+                "asset",
+                ":asset_id",
+                "txs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "asset_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "82f33b0b-f082-4a37-a9fd-d4298ffef70e",
+              "name": "Array of transaction objects",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "asset",
+                    ":asset_id",
+                    "txs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "asset_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1d1865e4-c183-4855-97b9-831cf3a5a7c4",
+          "name": "Get mempool transactions for an asset (Liquid/Elements only)",
+          "request": {
+            "name": "Get mempool transactions for an asset (Liquid/Elements only)",
+            "description": {},
+            "url": {
+              "path": [
+                "asset",
+                ":asset_id",
+                "txs",
+                "mempool"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "asset_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a073271a-1b88-4d7a-8321-d5e313d82ef4",
+              "name": "Array of unconfirmed transaction objects",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "asset",
+                    ":asset_id",
+                    "txs",
+                    "mempool"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "asset_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fb26a0ed-1bf9-4007-b79d-043e7b428ab7",
+          "name": "Paginate confirmed asset transactions (Liquid/Elements only)",
+          "request": {
+            "name": "Paginate confirmed asset transactions (Liquid/Elements only)",
+            "description": {},
+            "url": {
+              "path": [
+                "asset",
+                ":asset_id",
+                "txs",
+                "chain",
+                ":last_seen"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "asset_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "last_seen"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "50a3b115-586b-4864-88f2-345c914443d1",
+              "name": "Array of confirmed transaction objects",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "asset",
+                    ":asset_id",
+                    "txs",
+                    "chain",
+                    ":last_seen"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "asset_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "last_seen"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "384015b0-0835-47a6-a31f-6f2816ca82c4",
+          "name": "Get current total asset supply (Liquid/Elements only)",
+          "request": {
+            "name": "Get current total asset supply (Liquid/Elements only)",
+            "description": {},
+            "url": {
+              "path": [
+                "asset",
+                ":asset_id",
+                "supply"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "asset_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5cc0b21a-5a02-446c-97a5-1eb4321b2bcf",
+              "name": "The current asset supply",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "asset",
+                    ":asset_id",
+                    "supply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "asset_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "97c031c7-f89d-4d32-9782-a0586e00da98",
+          "name": "Get asset supply with decimal formatting (Liquid/Elements only)",
+          "request": {
+            "name": "Get asset supply with decimal formatting (Liquid/Elements only)",
+            "description": {},
+            "url": {
+              "path": [
+                "asset",
+                ":asset_id",
+                "supply",
+                "decimal"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "asset_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8b0d5778-017a-4415-84a6-5be34d2d3294",
+              "name": "The current asset supply",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "asset",
+                    ":asset_id",
+                    "supply",
+                    "decimal"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "asset_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "907b39f0-7d52-47f7-a3a3-fff6d4f2d449",
+          "name": "Get the list of issued assets (Liquid/Elements only)",
+          "request": {
+            "name": "Get the list of issued assets (Liquid/Elements only)",
+            "description": {},
+            "url": {
+              "path": [
+                "assets",
+                "registry"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fd009238-677f-4e82-a022-4e56867ac72e",
+              "name": "Array of registered assets with filtering and sorting",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "assets",
+                    "registry"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://blockstream.info/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "bcc03965-3110-44af-83a1-067c3617d305",
+    "name": "Blockstream Esplora HTTP Addresses Assets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Esplora is Blockstream's open-source Bitcoin block explorer and its HTTP REST API. It provides read access to blocks, transactions, addresses, the mempool, fee estimates, and (on Liquid/Elements networks) issued assets. The API is public and requires no authentication. The same API backs blockstream.info and its testnet, signet, and Liquid networks. Amounts are in satoshis; hashes and txids are hex-encoded.\n\nContact Support:\n Name: Blockstream Esplora",
+      "type": "text/plain"
+    }
+  }
+}

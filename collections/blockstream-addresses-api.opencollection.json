@@ -1,0 +1,226 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Blockstream Esplora HTTP Addresses API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Addresses",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get address information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/address/:address",
+            "params": [
+              {
+                "name": "address",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get address information"
+        },
+        {
+          "info": {
+            "name": "Get scripthash information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/scripthash/:hash",
+            "params": [
+              {
+                "name": "hash",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get scripthash information"
+        },
+        {
+          "info": {
+            "name": "Get address transaction history",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/address/:address/txs",
+            "params": [
+              {
+                "name": "address",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get address transaction history"
+        },
+        {
+          "info": {
+            "name": "Get scripthash transaction history",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/scripthash/:hash/txs",
+            "params": [
+              {
+                "name": "hash",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get scripthash transaction history"
+        },
+        {
+          "info": {
+            "name": "Paginate confirmed address transactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/address/:address/txs/chain/:last_seen_txid",
+            "params": [
+              {
+                "name": "address",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "last_seen_txid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns confirmed transactions, 25 per page. Provide the last_seen_txid of the previous page to fetch the next page (cursor pagination)."
+        },
+        {
+          "info": {
+            "name": "Paginate confirmed scripthash transactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/scripthash/:hash/txs/chain/:last_seen_txid",
+            "params": [
+              {
+                "name": "hash",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "last_seen_txid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Paginate confirmed scripthash transactions"
+        },
+        {
+          "info": {
+            "name": "Get unconfirmed address transactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/address/:address/txs/mempool",
+            "params": [
+              {
+                "name": "address",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get unconfirmed address transactions"
+        },
+        {
+          "info": {
+            "name": "Get unconfirmed scripthash transactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/scripthash/:hash/txs/mempool",
+            "params": [
+              {
+                "name": "hash",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get unconfirmed scripthash transactions"
+        },
+        {
+          "info": {
+            "name": "List unspent outputs for an address",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/address/:address/utxo",
+            "params": [
+              {
+                "name": "address",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List unspent outputs for an address"
+        },
+        {
+          "info": {
+            "name": "List unspent outputs for a scripthash",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/scripthash/:hash/utxo",
+            "params": [
+              {
+                "name": "hash",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List unspent outputs for a scripthash"
+        },
+        {
+          "info": {
+            "name": "Search addresses by prefix",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://blockstream.info/api/address-prefix/:prefix",
+            "params": [
+              {
+                "name": "prefix",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Search addresses by prefix"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
