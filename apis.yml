@@ -37,6 +37,14 @@ tags:
 - Blockchain
 - Cryptocurrency
 - Block Explorer
+- Financial-Services
+- Infrastructure
+tags_raw:
+- Company
+- Bitcoin
+- Blockchain
+- Cryptocurrency
+- Block Explorer
 - Financial Services
 - Infrastructure
 apis:
@@ -130,6 +138,8 @@ apis:
   humanURL: https://github.com/Blockstream/esplora/blob/master/API.md
   baseURL: https://blockstream.info/api
   tags:
+  - Transaction
+  tags_raw:
   - Transactions
   properties:
   - type: OpenAPI
