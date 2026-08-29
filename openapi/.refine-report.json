@@ -21,6 +21,15 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
+  "notes": [
+    "blockstream-addresses-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "blockstream-assets-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "blockstream-blocks-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "blockstream-fee-estimates-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "blockstream-mempool-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "blockstream-mining-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "blockstream-transactions-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
   "skipped": []
 }
