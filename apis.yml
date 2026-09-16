@@ -24,16 +24,13 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/blockstream.png
 name: Blockstream
-description: >-
-  Blockstream is a Bitcoin infrastructure company whose products include the Liquid
-  Network sidechain, the Green self-custody wallet, Blockstream Satellite, and
-  Bitcoin mining and data services. For developers its flagship public API is
-  Esplora, the open-source Bitcoin block explorer behind blockstream.info: a
-  no-authentication HTTP REST API for reading blocks, transactions, addresses,
-  scripthashes, the mempool, and fee estimates across Bitcoin mainnet, testnet, and
-  signet, plus Liquid/Elements issued assets. Amounts are returned in satoshis and
-  hashes are hex-encoded, with cursor pagination over confirmed transaction history.
-  Blockstream also ships GDK, its open-source cross-platform wallet SDK.
+description: 'Blockstream is a Bitcoin infrastructure company whose products include the Liquid Network
+  sidechain, the Green self-custody wallet, Blockstream Satellite, and Bitcoin mining and data services.
+  For developers its flagship public API is Esplora, the open-source Bitcoin block explorer behind blockstream.info:
+  a no-authentication HTTP REST API for reading blocks, transactions, addresses, scripthashes, the mempool,
+  and fee estimates across Bitcoin mainnet, testnet, and signet, plus Liquid/Elements issued assets. Amounts
+  are returned in satoshis and hashes are hex-encoded, with cursor pagination over confirmed transaction
+  history. Blockstream also ships GDK, its open-source cross-platform wallet SDK.'
 url: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -41,7 +38,7 @@ x-backed-by:
 - dcvc
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-18'
+modified: '2026-09-16'
 tags:
 - Company
 - Bitcoin
@@ -165,6 +162,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Website
+  url: https://blockstream.info
 - type: Documentation
   url: https://github.com/Blockstream/esplora/blob/master/API.md
 - type: GitHubOrganization
@@ -193,7 +192,10 @@ common:
   url: packages/blockstream-packages.yml
 - type: X-MCPServerCandidate
   url: mcp/blockstream-mcp.yml
-  note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type surfaces with a server that does not exist.'
+  note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate
+    — a tool list derived from the published API contracts, not an existing server. The scorer already
+    read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type
+    surfaces with a server that does not exist.'
 - type: LLMsTxt
   url: llms/blockstream-llms.txt
 - type: WellKnown
