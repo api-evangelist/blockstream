@@ -170,8 +170,6 @@ common:
   url: https://github.com/Blockstream
 - type: Blog
   url: https://blockstream.com/blog/
-- type: OpenAPI
-  url: openapi/_original/blockstream-esplora-openapi.yml
 - type: Overlay
   url: overlays/blockstream-esplora-overlay.yaml
 - type: Authentication
