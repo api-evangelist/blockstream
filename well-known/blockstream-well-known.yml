@@ -1,11 +1,12 @@
 generated: '2026-07-18'
 method: searched
 host: https://blockstream.info
-note: >-
-  Probed the standard /.well-known/ discovery surface on the blockstream.info host.
-  The host serves a single-page block-explorer app that returns the app shell for
-  unknown paths; no discovery documents are published.
-documents:
+note: Probed the standard /.well-known/ discovery surface on the blockstream.info host. The host serves
+  a single-page block-explorer app that returns the app shell for unknown paths; no discovery documents
+  are published.
+hosts:
+- host: https://blockstream.info
+  documents:
   - path: /.well-known/security.txt
     status: 404
   - path: /.well-known/openid-configuration
@@ -16,3 +17,8 @@ documents:
     status: 404
   - path: /.well-known/ai-plugin.json
     status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.

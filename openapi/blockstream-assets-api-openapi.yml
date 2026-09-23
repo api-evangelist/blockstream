@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Blockstream Esplora HTTP Addresses Assets API
+  title: Blockstream Esplora HTTP Assets API
   version: '1.0'
   description: Esplora is Blockstream's open-source Bitcoin block explorer and its HTTP REST API. It provides read access to blocks, transactions, addresses, the mempool, fee estimates, and (on Liquid/Elements networks) issued assets. The API is public and requires no authentication. The same API backs blockstream.info and its testnet, signet, and Liquid networks. Amounts are in satoshis; hashes and txids are hex-encoded.
   x-generated: '2026-07-18'
