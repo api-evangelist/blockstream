@@ -45,7 +45,7 @@ tags:
 - Blockchain
 - Cryptocurrency
 - Block Explorer
-- Financial-Services
+- Financial Services
 - Infrastructure
 tags_raw:
 - Company
@@ -55,6 +55,7 @@ tags_raw:
 - Block Explorer
 - Financial Services
 - Infrastructure
+- Financial-Services
 apis:
 - aid: blockstream:blockstream-addresses-api
   name: Blockstream Addresses API
