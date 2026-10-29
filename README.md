@@ -64,6 +64,117 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Blockstream is a company surfaced as a portfolio company of dcvc and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Blockstream is a Bitcoin infrastructure company whose products include the Liquid Network sidechain, the Green self-custody wallet, Blockstream Satellite, and Bitcoin mining and data services. For developers its flagship public API is Esplora, the open-source Bitcoin block explorer behind blockstream.info: a no-authentication HTTP REST API for reading blocks, transactions, addresses, scripthashes, the mempool, and fee estimates across Bitcoin mainnet, testnet, and signet, plus Liquid/Elements issued assets. Amounts are returned in satoshis and hashes are hex-encoded, with cursor pagination over confirmed transaction history. Blockstream also ships GDK, its open-source cross-platform wallet SDK.
 
-Backed by: dcvc
+**Areas:** Company · Bitcoin · Blockchain · Cryptocurrency · Block Explorer · Financial Services · Infrastructure
+
+## Blockstream on APIs.io
+
+Everything profiled for Blockstream is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/blockstream/](https://apis.io/providers/blockstream/)** — or go straight to one of the APIs or properties below.
+
+### APIs (7)
+
+- [Blockstream Addresses API](https://apis.io/apis/blockstream/blockstream-addresses-api/) — The Addresses API from Blockstream — 11 operation(s) for addresses.
+- [Blockstream Assets API](https://apis.io/apis/blockstream/blockstream-assets-api/) — The Assets API from Blockstream — 7 operation(s) for assets.
+- [Blockstream Blocks API](https://apis.io/apis/blockstream/blockstream-blocks-api/) — The Blocks API from Blockstream — 11 operation(s) for blocks.
+- [Blockstream Fee Estimates API](https://apis.io/apis/blockstream/blockstream-fee-estimates-api/) — The Fee Estimates API from Blockstream — 1 operation(s) for fee estimates.
+- [Blockstream Mempool API](https://apis.io/apis/blockstream/blockstream-mempool-api/) — The Mempool API from Blockstream — 3 operation(s) for mempool.
+- [Blockstream Mining API](https://apis.io/apis/blockstream/blockstream-mining-api/) — The Mining API from Blockstream — 1 operation(s) for mining.
+- [Blockstream Transactions API](https://apis.io/apis/blockstream/blockstream-transactions-api/) — The Transactions API from Blockstream — 10 operation(s) for transactions.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [blockstream-esplora](https://apis.io/servers/blockstream/blockstream-esplora/)
+
+#### Collections (7)
+
+Postman and Open Collection request collections.
+
+- [Blockstream Esplora HTTP Addresses API](https://apis.io/collections/blockstream/open-blockstream-addresses-api/)
+- [Blockstream Esplora HTTP Addresses Assets API](https://apis.io/collections/blockstream/open-blockstream-assets-api/)
+- [Blockstream Esplora HTTP Addresses Blocks API](https://apis.io/collections/blockstream/open-blockstream-blocks-api/)
+- [Blockstream Esplora HTTP Addresses Fee Estimates API](https://apis.io/collections/blockstream/open-blockstream-fee-estimates-api/)
+- [Blockstream Esplora HTTP Addresses Mempool API](https://apis.io/collections/blockstream/open-blockstream-mempool-api/)
+- [Blockstream Esplora HTTP Addresses Mining API](https://apis.io/collections/blockstream/open-blockstream-mining-api/)
+- [Blockstream Esplora HTTP Addresses Transactions API](https://apis.io/collections/blockstream/open-blockstream-transactions-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Blockstream Esplora Overlay](https://apis.io/overlays/blockstream/blockstream-esplora-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Blockstream Authentication](https://apis.io/security/blockstream/blockstream-authentication/)
+- [Blockstream Domain Security](https://apis.io/security/blockstream/blockstream-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://blockstream.info)
+- [Documentation](https://github.com/Blockstream/esplora/blob/master/API.md)
+- [Blog](https://blockstream.com/blog/)
+- [GitHub](https://github.com/Blockstream)
+
+## API Evangelist rating
+
+**Kin Score 20.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 11.5 |
+| Contract governance | 4.5 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 47.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 17.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/blockstream/](https://apis.io/providers/blockstream/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Blockstream: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/blockstream/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
